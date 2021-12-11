@@ -54,7 +54,7 @@ app.get("/stackoverflow/:id", async (request,response)=>{
 
 app.post("/stackoverflow", async (request,response)=>{
     const data = request.body;
-    const result = await client.db("b28wd").collection("stack").insertMany(data);
+    const result = await client.db("b28wd").collection("stack").insertOne(data);
     response.send(result);
     });
 
